@@ -8,8 +8,9 @@ body{
 body::before{
    content: "";
    position: fixed;
-   background: #040404 url(assets/light-bulbs-1125016.jpg) top right no-repeat;
+   background: #040404 url(assets/IMG_1813.JPG) top right no-repeat;
    left: 0;
+   transform: scaleX(-1);
    background-size: cover;
    right: 0;
    top: 0;
@@ -33,6 +34,9 @@ h1,h2,h3,h4,h5,h6{
 }
 .container h1 a{
     text-decoration: none;
+}
+.container{
+    margin-left: 5%;
 }
 #header{
     transition: ease-in-out 0.3s;
@@ -115,12 +119,66 @@ h1,h2,h3,h4,h5,h6{
 }
 .nav-menu{
     margin-top: -700px;
-    margin-left: 270%;
+    margin-left: 170%;
 }
 .nav-menu ul{
     display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+.nav-menu li + li{
+    margin-left: 30px;
+}
+.nav-menu ul li a{
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 26px;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+.nav-menu a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #18d26e;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.nav-menu a:hover::before,
+.nav-menu li:hover > a::before,
+.nav-menu .active > a::before{
+    visibility: visible;
+    width: 45px;
+}
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+    color: #fff;
+    text-decoration: none;
+}
+.mobile-nav-toggle{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+}
+.mobile-nav-toggle i{
+    color: #fff;
 }
  
