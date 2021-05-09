@@ -1,156 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: "Montserrat", sans-serif;
-    min-width: 100%;
-    min-height: 100vh;
-    background: rgba(0, 0, 0, 0.938);
-  }
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    color: #f0f0f0;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-  }
-  .nav-links {
-    display: flex;
-    align-items: center;
-  }
-  .nav-link {
-    margin: 0 1rem;
-  }
-  #banner {
-    margin: 5rem 0;
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .banner-text {
-    width: 40%;
-  }
-  .banner-text h1 {
-    font-size: 5rem;
-  }
-  .banner-text p {
-    font-size: 1.2rem;
-    margin: 2rem 0;
-  }
-  .banner-text button {
-    border: none;
-    border-radius: 1rem;
-    background: none;
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
-    color: white;
-    background: rgb(185, 95, 11);
-  }
-  .img {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  .banner-img {
-    width: 50%;
-    z-index: -2;
-    border-image-slice: 1;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-image-source: linear-gradient(to left, black, rgb(185, 98, 11));
-  }
-  .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  #about {
-    margin: 5rem 0;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .about-text {
-    width: 50%;
-    margin-right: 5rem;
-  }
-  .about-text h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  .about-text p {
-    line-height: 160%;
-  }
-  .about-img {
-    height: 70%;
-  }
-  #vid {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 70vh;
-    margin: 5rem 0;
-  }
-  #vid h3 {
-    font-size: 4rem;
-  }
-  #vid h3 span {
-    color: rgb(185, 98, 11);
-  }
-  .card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 4rem;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: gray;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    margin: 2rem;
-    box-shadow: 1px 1px 1px -1px gray;
-    color: black;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  .card-text {
-    font-size: 1.2rem;
-  }
-  .card:hover {
-    transform: scale(1.1);
-  }
-  .icon {
-    font-size: 3rem;
-    margin: 2rem;
-  }
-  .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -999;
-    background: black;
-  }
-  .video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-  }
+const navbar = document.querySelector("nav");
+
+function animation() {
+  var controller = new ScrollMagic.Controller();
+
+  const t1 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+
+  t1.fromTo(navbar, 1, { y: "-10rem" }, { y: 0 });
+  t1.fromTo(
+    ".banner-text",
+    0.5,
+    { x: "-2rem", opacity: 0 },
+    { x: 0, opacity: 1 },
+    "-=1"
+  );
+  t1.fromTo(
+    ".banner-img",
+    0.5,
+    { x: "5rem", opacity: 0 },
+    { x: 0, opacity: 1 }
+  );
+  t1.fromTo(".banner-img img", 0.5, { scale: 1.5 }, { scale: 1 });
+
+  // about animations
+
+  const t2 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+
+  t2.fromTo(
+    ".about-text",
+    0.5,
+    { x: "-2rem", opacity: 0 },
+    { x: 0, opacity: 1 }
+  );
+  t2.fromTo(".about-img", 0.5, { x: "5rem", opacity: 0 }, { x: 0, opacity: 1 });
+  t2.fromTo(".about-img img", 0.5, { scale: 1.5 }, { scale: 1 });
+
+  new ScrollMagic.Scene({
+    triggerElement: "#about",
+    triggerHook: 0.5,
+    reverse: false,
+  })
+    .setTween(t2)
+    .addTo(controller);
+
+  // card animations
+
+  const t3 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+  t3.fromTo(
+    ".card",
+    1,
+    { y: "-3rem", opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.3 }
+  );
+  t3.set(".card", { clearProps: "all" });
+
+  new ScrollMagic.Scene({
+    triggerElement: "#vid",
+    triggerHook: 0.5,
+    reverse: false,
+  })
+    .setTween(t3)
+    .addTo(controller);
+}
+
+animation();
