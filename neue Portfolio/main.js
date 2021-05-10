@@ -48,7 +48,7 @@ function animation() {
   t3.fromTo(
     ".card",
     1,
-    { y: "-3rem", opacity: 0 },
+    { y: "-3rem", opacity: 0.1 },
     { y: 0, opacity: 1, stagger: 0.3 }
   );
   t3.set(".card", { clearProps: "all" });
