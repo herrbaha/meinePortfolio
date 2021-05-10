@@ -7,19 +7,19 @@ function animation() {
 
   t1.fromTo(navbar, 1, { y: "-10rem" }, { y: 0 });
   t1.fromTo(
-    ".banner-text",
+    ".developer-text",
     0.5,
     { x: "-2rem", opacity: 0 },
     { x: 0, opacity: 1 },
     "-=1"
   );
   t1.fromTo(
-    ".banner-img",
+    ".developer-img",
     0.5,
     { x: "5rem", opacity: 0 },
     { x: 0, opacity: 1 }
   );
-  t1.fromTo(".banner-img img", 0.5, { scale: 1.5 }, { scale: 1 });
+  t1.fromTo(".developer-img img", 0.5, { scale: 1.5 }, { scale: 1 });
 
   // about animations
 
