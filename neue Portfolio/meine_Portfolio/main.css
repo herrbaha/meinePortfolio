@@ -183,11 +183,12 @@ span {
 .card-text {
   font-size: 1.2rem;
 }
-.card:hover {
+.card:hover,
+.card2:hover {
   transform: scale(1.1);
 }
 .icon {
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 2rem;
 }
 .video {
@@ -228,6 +229,10 @@ span {
     flex-direction: column;
   }
   #vid{
+    display: flex;
+    flex-direction: column;
+  }
+  #projekts{
     display: flex;
     flex-direction: column;
   }
