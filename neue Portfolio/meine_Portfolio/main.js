@@ -60,6 +60,23 @@ function animation() {
   })
     .setTween(t3)
     .addTo(controller);
+
+    const t4 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+  t4.fromTo(
+    ".card2",
+    1,
+    { y: "-3rem", opacity: 0.1 },
+    { y: 0, opacity: 1, stagger: 0.3 }
+  );
+  t4.set(".card2", { clearProps: "all" });
+
+  new ScrollMagic.Scene({
+    triggerElement: "#projekts",
+    triggerHook: 0.5,
+    reverse: false,
+  })
+    .setTween(t4)
+    .addTo(controller);
 }
 
 animation();
