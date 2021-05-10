@@ -206,22 +206,23 @@ span {
   object-fit: cover;
   opacity: 0.8;
 }
-@media  (max-width: 664px){
+
+@media  (max-width: 535px){
   .container{
     display: flex;
     flex-direction: column;
   }
-}
-@media  (max-width: 330px){
-  .container{
+  #banner{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
-  .img{
-    width: 8rem;
-    height: 18rem;
+  #about{
+    display: flex;
+    flex-direction: column;
   }
-}
-h2 h3{
-  font-size: 2px;
+  #vid{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
