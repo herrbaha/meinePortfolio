@@ -13,9 +13,9 @@ body {
   margin: 0 auto;
   color: #f0f0f0;
 }
-#logo img{
-    width: 4rem;
-    height: 4rem;
+#logo img {
+  width: 4rem;
+  height: 4rem;
 }
 nav {
   display: flex;
@@ -30,13 +30,13 @@ nav {
 .nav-link {
   margin: 0 1rem;
 }
-.nav-links a{
-    text-decoration: none;
-    color: white;
+.nav-links a {
+  text-decoration: none;
+  color: white;
 }
-.nav-links a:hover{
-    font-weight: 800;
-    color: rgb(185, 95, 11);
+.nav-links a:hover {
+  font-weight: 800;
+  color: rgb(185, 95, 11);
 }
 
 #developer {
@@ -66,13 +66,12 @@ nav {
   color: white;
   background: rgb(185, 95, 11);
 }
-.developer-text button a{
+.developer-text button a {
   text-decoration: none;
   color: #fff;
 }
-.developer-text button:hover{
-    background: rgba(0, 0, 0, 0.938);
-    
+.developer-text button:hover {
+  background: rgba(0, 0, 0, 0.938);
 }
 .img {
   width: 100%;
@@ -84,9 +83,7 @@ nav {
   z-index: -2;
   border-image-slice: 1;
   border-top: 2px solid;
-  /* border-bottom: 2px solid; */
   border-image-source: linear-gradient(to left, black, black);
-  
 }
 .img img {
   width: 100%;
@@ -94,7 +91,7 @@ nav {
   object-fit: cover;
 }
 
-.developer-text h2 span{
+.developer-text h2 span {
   color: rgb(185, 95, 11);
   border-bottom: 3px solid #18d26e;
   padding-bottom: 6px;
@@ -111,14 +108,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 .about-text {
   width: 50%;
   margin-right: 5rem;
   margin-left: 2%;
 }
-.about-text2{
+.about-text2 {
   width: 30%;
   margin-right: 5rem;
   margin-left: 2%;
@@ -129,7 +125,6 @@ nav {
 }
 .about-text2 p {
   line-height: 160%;
-  
 }
 .about-text h2 {
   font-size: 3rem;
@@ -137,7 +132,6 @@ nav {
 }
 .about-text p {
   line-height: 160%;
-  
 }
 .about-img {
   height: 90%;
@@ -152,7 +146,6 @@ nav {
   width: 100%;
   height: 70vh;
   margin: 5rem 0;
-  
 }
 #vid h3 {
   font-size: 4rem;
@@ -166,7 +159,8 @@ span {
   justify-content: center;
   margin-top: 4rem;
 }
-.card, .card2{
+.card,
+.card2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,21 +185,21 @@ span {
   font-size: 5rem;
   margin: 2rem;
 }
-.kinder{
+.kinder {
   background: url(https://foto.haberler.com/haber/2020/06/05/hava-durumu-5-haziran-meteoroloji-hava-durumu-13292567_8759_amp.jpg);
   background-size: cover;
   width: 10rem;
   height: 15rem;
   color: rgb(235, 231, 17);
 }
-.brücke{
+.brücke {
   background: url(https://www.naijatechguide.com/wp-content/uploads/2019/05/Top-best-Android-Apps-to-watch-and-stream-free-movies-online-600x400.jpg);
   background-size: 100% 100%;
   width: 10rem;
   height: 15rem;
   color: rgb(231, 235, 22);
 }
-.space{
+.space {
   background: url(https://az779572.vo.msecnd.net/screens-400/bde4deffc31d471e86c761f6541e3ff2);
   background-position: 85% 30%;
   width: 10rem;
@@ -233,29 +227,27 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
-@media  (max-width: 535px){
-  .container{
+@media (max-width: 535px) {
+  .container {
     display: flex;
     flex-direction: column;
   }
-  #developer{
+  #developer {
     display: flex;
     flex-direction: column;
   }
-  #about{
+  #about {
     display: flex;
     flex-direction: column;
   }
-  #vid{
+  #vid {
     display: flex;
     flex-direction: column;
   }
-  #projekts{
+  #projekts {
     display: flex;
     flex-direction: column;
   }
-
 }
