@@ -188,6 +188,7 @@ span {
 .icon {
   font-size: 5rem;
   margin: 2rem;
+  color: orange;
 }
 .weather {
   background: url(https://foto.haberler.com/haber/2020/06/05/hava-durumu-5-haziran-meteoroloji-hava-durumu-13292567_8759_amp.jpg);
