@@ -177,6 +177,10 @@ span {
 .card-text {
   font-size: 1.2rem;
 }
+.card-text a{
+  color: white;
+  text-decoration: none;
+}
 .card:hover,
 .card2:hover {
   transform: scale(1.1);
